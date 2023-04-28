@@ -1,0 +1,12 @@
+.sidebar_container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 30px 30px 30px;
+  width: 30vw;
+  min-height: 100vh;
+  background-color: var(--secondary);
+  color: var(--blue);
+  gap: 15px;
+  font-size: 1.4rem;
+}
+

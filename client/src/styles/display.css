@@ -1,0 +1,32 @@
+.display_main{
+  padding-top: 90px;
+  width: 65vw;
+  min-height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display_empty{
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 8px dashed var(--secondary);
+  border-radius: 15px;
+}
+
+.display_empty > img{
+  height: 100px;
+  width: auto;
+  filter: invert(90%) sepia(13%) saturate(194%) hue-rotate(217deg) brightness(92%) contrast(88%);
+}
+
+.display_empty > p{
+  padding-top: 50px;
+  font-size: 2rem;
+  color: var(--purple);
+}

@@ -16,7 +16,17 @@ html {
 :root {
   --primary: #f5edf0;
   --blue: #355070;
-  --highlight: #F15025;
+  --red: #F15025;
   --purple: #6D597A;
   --secondary: #D1CCDC;
+}
+
+/* Filter Settings
+red: filter: invert(42%) sepia(44%) saturate(2134%) hue-rotate(341deg) brightness(92%) contrast(106%);
+blue: filter: invert(27%) sepia(6%) saturate(3691%) hue-rotate(173deg) brightness(102%) contrast(91%); 
+
+*/
+
+.home_container{
+  display: flex;
 }

@@ -6,8 +6,8 @@ function Sidebar(props) {
     <section className="sidebar_container">
       <h2>Offical Cocktails</h2>
       <p>Search through thousands of premium cocktails.</p>
-      <button>Ingredients</button>
-      <button>Instructions</button>
+      <button className="sidebar_button">Ingredients</button>
+      <button className="sidebar_button">Instructions</button>
       <p>All drinks listed here are supplied by the cocktailDB/api</p>
     </section>
   )

@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/navbar.css'
 
-function Navbar() {
+function Navbar(props) {
   return(
     <header className="navbar_container">
       <nav className="navbar_content">

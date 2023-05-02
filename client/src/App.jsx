@@ -8,9 +8,14 @@ function App() {
   const [searchParam, setSearchParam] = useState("")
   const [searchResults, setSearchResults] = useState({})
 
+  function handleSearch(e) {
+    if(e.key === "Enter") {
+      setSearchParam(e.target.value)
+    }
+  }
+
   useEffect(() => {
     if(searchParam === ""){
-      console.log("Effect not searched")
       return
     }
 
@@ -18,7 +23,7 @@ function App() {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkType}`)
       .then((res) => res.json())
       .then((data)=> {
-        console.log(data)
+        setSearchResults(data)
       })
       .catch((err) => {
         console.log(err)
@@ -29,6 +34,7 @@ function App() {
     <>
       <Home
         searchResults = {searchResults}
+        handleSearch = {handleSearch}
       />
     </>
   )

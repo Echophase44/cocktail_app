@@ -4,11 +4,13 @@ import Navbar from "../components/Navbar"
 import Display from "../components/Display"
 
 function Home(props) {
-  const { searchResults } = props
+  const { searchResults, handleSearch } = props
 
   return (
     <>
-      <Navbar />
+      <Navbar 
+        handleSearch = {handleSearch}
+      />
       <div className="home_container">
         <Sidebar />
         <Display 

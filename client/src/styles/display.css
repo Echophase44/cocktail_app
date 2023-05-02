@@ -30,3 +30,30 @@
   font-size: 2rem;
   color: var(--purple);
 }
+
+.display_cardContainer{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+  transition: all .3s ease;
+}
+
+.display_cardDrinkImage{
+  height: 100px;
+  width: 100px
+}
+
+.display_allCards{
+  padding-top: 90px;
+  width: 65vw;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 25px;
+  border: 1px solid red;
+  flex-wrap: wrap;
+}

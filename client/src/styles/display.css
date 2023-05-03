@@ -1,5 +1,5 @@
 .display_main{
-  padding-top: 80px;
+  padding-top: 90px;
   width: 65vw;
   min-height: 100vh;
   background-color: var(--primary);
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.display_empty{
+.display_empty, .display_noResults{
   height: 500px;
   width: 500px;
   display: flex;
@@ -25,7 +25,7 @@
   filter: invert(90%) sepia(13%) saturate(194%) hue-rotate(217deg) brightness(92%) contrast(88%);
 }
 
-.display_empty > p{
+.display_empty > p, .display_noResults > p{
   padding-top: 50px;
   font-size: 2rem;
   color: var(--purple);
@@ -46,9 +46,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 250px;
-  width: 200px;
-  justify-content: end;
+  max-height: 500px;
+  width: 250px;
+  justify-content: space-between;
   align-items: center;
   transition: all .3s ease;
   background-color: white;
@@ -58,16 +58,26 @@
 .display_cardDrinkImage{
   position: absolute;
   top: 0;
-  height: 200px;
-  width: auto;
+  height: auto;
+  width: 250px;
   transition: all .3s ease;
+}
+
+.display_filler{
+  min-height: 250px;
+  width: 250px;
 }
 
 .display_cardQuote{
   font-size: 1.4rem;
+  padding: 3px;
 }
 
 .display_cardContainer:hover .display_cardDrinkImage{
   cursor: pointer;
   opacity: 0.5;
+}
+
+.display_noResults{
+  border: 8px dashed var(--red);
 }

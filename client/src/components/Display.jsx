@@ -3,16 +3,15 @@ import shaker from '../assets/shaker.png'
 import '../styles/display.css'
 
 function Display(props) {
-  const { searchResults } = props
+  const { searchResults, currentQuotes } = props
 
     const drinkImages = searchResults.drinks?.map((element, index) => (
       <div key={index} className='display_cardContainer'>
         <img className="display_cardDrinkImage" src={element.strDrinkThumb} alt="" />
-        <p className='display_cardQuote'>This is quite the image!</p>
+        <div className='display_filler'></div>
+        <p className='display_cardQuote'>{currentQuotes[index]?.quote} <em>-{currentQuotes[index]?.author}</em></p>
       </div>
     ))
-
-    console.log(searchResults)
 
   return (
     <section className='display_main'>
@@ -26,7 +25,7 @@ function Display(props) {
         {drinkImages}
       </div>}
 
-      {searchResults.drinks === null && <div className='display_empty'> 
+      {searchResults.drinks === null && <div className='display_noResults'> 
       <p>No results found!</p>
       <p>Try searching for something else!</p>
       </div>}

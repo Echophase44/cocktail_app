@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar"
 import Display from "../components/Display"
 
 function Home(props) {
-  const { searchResults, handleSearch, currentQuotes } = props
+  const { searchResults, handleSearch, currentQuotes, selectDrink } = props
 
   return (
     <>
@@ -16,6 +16,7 @@ function Home(props) {
         <Display 
           searchResults = {searchResults}
           currentQuotes = {currentQuotes}
+          selectDrink = {selectDrink}
         />
       </div>
     </>

@@ -8,6 +8,7 @@ function App() {
   const [searchParam, setSearchParam] = useState("")
   const [searchResults, setSearchResults] = useState({})
   const [currentQuotes, setCurrentQuotes] = useState({})
+  const [selectedDrink, setSelectedDrink] = useState({})
 
   function handleSearch(e) {
     if(e.key === "Enter") {
@@ -48,12 +49,17 @@ function App() {
       })
   }, [searchParam])
 
+  function selectDrink(index){
+    console.log(searchResults.drinks[index])
+  }
+
   return (
     <>
       <Home
         searchResults = {searchResults}
         handleSearch = {handleSearch}
         currentQuotes ={currentQuotes}
+        selectDrink ={selectDrink}
       />
     </>
   )

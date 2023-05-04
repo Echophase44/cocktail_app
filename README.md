@@ -10,4 +10,8 @@
 
 ## ToDo for MVP
 
-- Too much to list, once I get more of the obvious things out of the way I'll start breaking down the other ideas.
+- Add ability to see ingredients and instructions.
+- Add the toggle for both as well.
+- Add language selection for ingredients once those are complete.
+- Add ability to save favorites: icon over image and local storage.
+- Add drink name to cards.

@@ -3,11 +3,11 @@ import shaker from '../assets/shaker.png'
 import '../styles/display.css'
 
 function Display(props) {
-  const { searchResults, currentQuotes } = props
+  const { searchResults, currentQuotes, selectDrink } = props
 
     const drinkImages = searchResults.drinks?.map((element, index) => (
-      <div key={index} className='display_cardContainer'>
-        <img className="display_cardDrinkImage" src={element.strDrinkThumb} alt="" />
+      <div key={index} className='display_cardContainer' onClick={() => selectDrink(index)}>
+        <img className="display_cardDrinkImage" src={element.strDrinkThumb} alt="Drink in a glass" />
         <div className='display_filler'></div>
         <p className='display_cardQuote'>{currentQuotes[index]?.quote} <em>-{currentQuotes[index]?.author}</em></p>
       </div>

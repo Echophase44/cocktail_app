@@ -24,7 +24,7 @@ function App() {
     if(searchResults.drinks?.length >= 1){
       let collection = []
       for(let i = 0; i < searchResults.drinks.length; i++){
-        let selection = Math.floor(Math.random() * 51)
+        let selection = Math.floor(Math.random() * 50)
          collection.push(quotesData.quotes[selection])
       }
         setCurrentQuotes(collection)

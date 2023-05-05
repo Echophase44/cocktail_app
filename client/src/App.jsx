@@ -50,7 +50,7 @@ function App() {
   }, [searchParam])
 
   function selectDrink(index){
-    console.log(searchResults.drinks[index])
+    setSelectedDrink(searchResults.drinks[index])
   }
 
   return (
@@ -60,6 +60,7 @@ function App() {
         handleSearch = {handleSearch}
         currentQuotes ={currentQuotes}
         selectDrink ={selectDrink}
+        selectedDrink = {selectedDrink}
       />
     </>
   )

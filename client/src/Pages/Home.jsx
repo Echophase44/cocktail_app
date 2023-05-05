@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar"
 import Display from "../components/Display"
 
 function Home(props) {
-  const { searchResults, handleSearch, currentQuotes, selectDrink } = props
+  const { searchResults, handleSearch, currentQuotes, selectDrink, selectedDrink } = props
 
   return (
     <>
@@ -12,7 +12,9 @@ function Home(props) {
         handleSearch = {handleSearch}
       />
       <div className="home_container">
-        <Sidebar />
+        <Sidebar 
+          selectedDrink = {selectedDrink}
+        />
         <Display 
           searchResults = {searchResults}
           currentQuotes = {currentQuotes}

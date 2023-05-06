@@ -9,6 +9,9 @@ function App() {
   const [searchResults, setSearchResults] = useState({})
   const [currentQuotes, setCurrentQuotes] = useState({})
   const [selectedDrink, setSelectedDrink] = useState({})
+  const [ingredients, setIngredients] = useState([])
+  const [measurements, setMeasurements] = useState([])
+  const [instructions, setInstructions] = useState([])
 
   function handleSearch(e) {
     if(e.key === "Enter") {
@@ -49,8 +52,37 @@ function App() {
       })
   }, [searchParam])
 
+  function loadIngredients() {
+    const stagingIngredients = []
+
+    for (const property in selectedDrink){   
+      if(property.match(/strIngredient[1-9]|1[0-5]/g) && typeof selectedDrink[property] === "string"){
+        stagingIngredients.push(selectedDrink[property])
+      }
+    }
+    setIngredients(stagingIngredients)
+  }
+
+  function loadMeasurements(){
+    const stagingMeasurements = []
+
+    for (const property in selectedDrink){
+      if (property.match(/strMeasure[1-9]|1[0-5]/g) && typeof selectedDrink[property] === "string"){
+        stagingMeasurements.push(selectedDrink[property])
+      }
+    }
+    setMeasurements(stagingMeasurements)
+  }
+
+  function loadInstructions() {
+    setInstructions(selectedDrink.strInstructions)    
+  }
+
   function selectDrink(index){
     setSelectedDrink(searchResults.drinks[index])
+    loadIngredients()
+    loadMeasurements()
+    loadInstructions()
   }
 
   return (
@@ -58,9 +90,12 @@ function App() {
       <Home
         searchResults = {searchResults}
         handleSearch = {handleSearch}
-        currentQuotes ={currentQuotes}
-        selectDrink ={selectDrink}
+        currentQuotes = {currentQuotes}
+        selectDrink = {selectDrink}
         selectedDrink = {selectedDrink}
+        ingredients = {ingredients}
+        measurements = {measurements}
+        instructions = {instructions}
       />
     </>
   )

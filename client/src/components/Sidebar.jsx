@@ -1,24 +1,28 @@
 import React from "react";
-import { useState } from "react";
 import '../styles/sidebar.css'
 
 function Sidebar(props) {
-  const { selectedDrink } = props
+  const { selectedDrink, ingredients, instructions, measurements } = props
 
-  console.log(selectedDrink)
+  console.log(measurements)
 
-  for (const property in selectedDrink){
-    if(property.match(/strIngredient[1-9]|1[0-5]/g) && typeof selectedDrink[property] === "string")
-    console.log(selectedDrink[property])
-  }
+  const currentIngredients = ingredients.map((element, index) => (
+    <span>{element}</span>    
+  ))
 
-  // const selectedIngredients = selectedDrink
+  const currentMeasurements = measurements.map((element, index) => (
+    <span>{element}</span>
+  ))
 
   return(
     <section className="sidebar_container">
       <h2>Offical Cocktails</h2>
       <p>Search through thousands of premium cocktails.</p>
       <button className="sidebar_button">Ingredients</button>
+        <div>
+          {currentIngredients}
+          {currentMeasurements}
+        </div>
       <button className="sidebar_button">Instructions</button>
       <p>All drinks listed here are supplied by the cocktailDB/api</p>
     </section>

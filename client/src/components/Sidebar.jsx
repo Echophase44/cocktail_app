@@ -1,34 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import '../styles/sidebar.css'
 
 function Sidebar(props) {
+  const [panels, setPanels]= useState({ingredientsPanel: false, measurementsPanel: false})
+
+  console.log(panels.ingredientsPanel)
+
   const { ingredients, instructions, measurements } = props
 
-  console.log(instructions)
-  const currentIngredients = ingredients.map((element, index) => (
-    <span className="sidebar_ingredient">{element}</span>    
+  const currentIngredients = ingredients.map((element) => (
+    <li className="sidebar_ingredient">{element}</li>    
   ))
 
-  const currentMeasurements = measurements.map((element, index) => (
-    <span className="sidebar_measurement">{element}</span>
+  const currentMeasurements = measurements.map((element) => (
+    <li className="sidebar_measurement">{element}</li>
   ))
 
   const currentInstructions = instructions.map((element, index) => (
     <span>{index + 1}. {element}</span>
   ))
 
+  function toggleIngredientsView(){
+    setPanels(prevPanels => ({
+      ...prevPanels,
+      ingredientsPanel: !prevPanels.ingredientsPanel
+    }))
+  }
+
   return(
-    <section className="sidebar_container">
+    <section className={"sidebar_container" + (panels.ingredientsPanel ? " open" : "")}>
       <h2>Offical Cocktails</h2>
       <p>Search through thousands of premium cocktails.</p>
-      <button className="sidebar_button">Ingredients</button>
+      <button className={"sidebar_button" + (panels.ingredientsPanel ? " open" : "")} onClick={toggleIngredientsView}>Ingredients</button>
         <div className="sidebar_ingredientsContainer">
-          <div className="sidebar_ingredientsWrapper">
+          <ul className={"sidebar_ingredientsWrapper"}
+            >
             {currentIngredients}
-          </div>
-          <div className="sidebar_measurementsWrapper">
+          </ul>
+          <ul className="sidebar_measurementsWrapper">
             {currentMeasurements}
-          </div>
+          </ul>
         </div>
       <button className="sidebar_button">Instructions</button>
         <div className="sidebar_instructionsContainer">

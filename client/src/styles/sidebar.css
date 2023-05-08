@@ -42,6 +42,11 @@
   transform: rotate(180deg)
 }
 
+.sidebar_button.open::before{
+  transform: rotate(270deg);
+  transition: all .3s ease;
+}
+
 .sidebar_ingredientsContainer{
   display: flex;
   gap: 10px;

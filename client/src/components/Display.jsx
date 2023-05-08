@@ -21,7 +21,7 @@ function Display(props) {
         <img src={shaker} alt="Drink shaker" />
         <p>Search for a drink to see results.</p>
       </div> }
-
+      
       {searchResults.drinks?.length >= 1 && <div className='display_allCards'>
         {drinkImages}
       </div>}

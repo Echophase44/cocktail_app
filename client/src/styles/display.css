@@ -9,8 +9,9 @@
 }
 
 .display_empty, .display_noResults{
-  height: 500px;
-  width: 500px;
+  margin-top: 150px;
+  height: 400px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;

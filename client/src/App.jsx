@@ -52,9 +52,18 @@ function App() {
       })
   }, [searchParam])
 
+  useEffect(() => {
+    if(Object.keys(selectedDrink).length === 0){
+      return
+    }
+    loadIngredients()
+    loadMeasurements()
+    loadInstructions()
+  }, [selectedDrink])
+
   function loadIngredients() {
     const stagingIngredients = []
-
+    
     for (const property in selectedDrink){   
       if(property.match(/strIngredient[1-9]|1[0-5]/g) && typeof selectedDrink[property] === "string"){
         stagingIngredients.push(selectedDrink[property])
@@ -75,14 +84,11 @@ function App() {
   }
 
   function loadInstructions() {
-    setInstructions(selectedDrink.strInstructions)    
+    setInstructions(selectedDrink.strInstructions.split(". "))    
   }
 
   function selectDrink(index){
     setSelectedDrink(searchResults.drinks[index])
-    loadIngredients()
-    loadMeasurements()
-    loadInstructions()
   }
 
   return (

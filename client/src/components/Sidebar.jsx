@@ -2,16 +2,19 @@ import React from "react";
 import '../styles/sidebar.css'
 
 function Sidebar(props) {
-  const { selectedDrink, ingredients, instructions, measurements } = props
+  const { ingredients, instructions, measurements } = props
 
-  console.log(measurements)
-
+  console.log(instructions)
   const currentIngredients = ingredients.map((element, index) => (
-    <span>{element}</span>    
+    <span className="sidebar_ingredient">{element}</span>    
   ))
 
   const currentMeasurements = measurements.map((element, index) => (
-    <span>{element}</span>
+    <span className="sidebar_measurement">{element}</span>
+  ))
+
+  const currentInstructions = instructions.map((element, index) => (
+    <span>{index + 1}. {element}</span>
   ))
 
   return(
@@ -19,12 +22,19 @@ function Sidebar(props) {
       <h2>Offical Cocktails</h2>
       <p>Search through thousands of premium cocktails.</p>
       <button className="sidebar_button">Ingredients</button>
-        <div>
-          {currentIngredients}
-          {currentMeasurements}
+        <div className="sidebar_ingredientsContainer">
+          <div className="sidebar_ingredientsWrapper">
+            {currentIngredients}
+          </div>
+          <div className="sidebar_measurementsWrapper">
+            {currentMeasurements}
+          </div>
         </div>
       <button className="sidebar_button">Instructions</button>
-      <p>All drinks listed here are supplied by the cocktailDB/api</p>
+        <div className="sidebar_instructionsContainer">
+          {currentInstructions}
+        </div>
+      <p className="sidebar_note">All listed drinks are supplied by the CocktailDB API.</p>
     </section>
   )
 }

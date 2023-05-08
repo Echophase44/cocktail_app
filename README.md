@@ -10,7 +10,6 @@
 
 ## ToDo for MVP
 
-- Add ability to see ingredients and instructions.
 - Add the toggle for both as well.
 - Add language selection for ingredients once those are complete.
 - Add ability to save favorites: icon over image and local storage.

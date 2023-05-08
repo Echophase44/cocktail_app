@@ -41,3 +41,30 @@
   transition: all .2s ease;
   transform: rotate(180deg)
 }
+
+.sidebar_ingredientsContainer{
+  display: flex;
+  gap: 10px;
+}
+
+.sidebar_ingredientsWrapper, .sidebar_measurementsWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.sidebar_measurementsWrapper{
+  align-items: center;
+}
+
+.sidebar_instructionsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 8px;
+}
+
+.sidebar_note{
+  padding-top: 20px;
+}

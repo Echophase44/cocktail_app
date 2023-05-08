@@ -1,11 +1,11 @@
 .display_main{
-  padding-top: 90px;
   width: 65vw;
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--primary);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: bottom;
+  overflow-y: auto;
 }
 
 .display_empty, .display_noResults{
@@ -32,17 +32,18 @@
 }
 
 .display_allCards{
-  padding: 10px;
+  margin-top: 90px;
   width: 65vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   min-height: 80vh;
   gap: 25px;
-  flex-wrap: wrap;
+  
 }
 
 .display_cardContainer{
-  padding: 10px;
+  padding: 8px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -66,6 +67,11 @@
 .display_filler{
   min-height: 250px;
   width: 250px;
+}
+
+.display_drinkName{
+  font-size: 1.8rem;
+  color: var(--blue)
 }
 
 .display_cardQuote{

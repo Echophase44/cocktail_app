@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import '../styles/sidebar.css'
 
 function Sidebar(props) {
-  const [panels, setPanels]= useState({ingredientsPanel: false, measurementsPanel: false})
-
-  console.log(panels.ingredientsPanel)
-
   const { ingredients, instructions, measurements } = props
+  const [ panels, setPanels ]= useState({ingredientsPanel: false, instructionsPanel: false})
+
+  
+
 
   const currentIngredients = ingredients.map((element) => (
     <li className="sidebar_ingredient">{element}</li>    
@@ -27,17 +27,21 @@ function Sidebar(props) {
     }))
   }
 
+  function toggleInstructionsView() {
+    
+  }
+
   return(
-    <section className={"sidebar_container" + (panels.ingredientsPanel ? " open" : "")}>
+    <section className="sidebar_container">
       <h2>Offical Cocktails</h2>
       <p>Search through thousands of premium cocktails.</p>
       <button className={"sidebar_button" + (panels.ingredientsPanel ? " open" : "")} onClick={toggleIngredientsView}>Ingredients</button>
         <div className="sidebar_ingredientsContainer">
-          <ul className={"sidebar_ingredientsWrapper"}
-            >
+          <ul className={"sidebar_ingredientsWrapper" + (panels.ingredientsPanel ? " open" : "")}>
+            {ingredients.length === 0 && <li>No Ingredients to display.</li>}
             {currentIngredients}
           </ul>
-          <ul className="sidebar_measurementsWrapper">
+          <ul className={"sidebar_measurementsWrapper" + (panels.ingredientsPanel ? " open" : "")}>
             {currentMeasurements}
           </ul>
         </div>

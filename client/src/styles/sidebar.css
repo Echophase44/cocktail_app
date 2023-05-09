@@ -56,7 +56,19 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 8px;
+}
+
+.sidebar_ingredientsWrapper li, .sidebar_measurementsWrapper li{
+opacity: 0;
+max-height: 0;
+overflow-y: hidden;
+transition: 0.2s;
+}
+
+.sidebar_ingredientsWrapper.open li, .sidebar_measurementsWrapper.open li{
+  opacity: 1;
+  max-height: 500px;
+  transition: all .3s ease;
 }
 
 .sidebar_measurementsWrapper{

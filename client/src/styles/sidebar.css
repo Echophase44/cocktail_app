@@ -10,6 +10,10 @@
   font-size: 1.4rem;
 }
 
+.sidebar_container > p{
+  padding-bottom: 25px;
+}
+
 .sidebar_button{
   position: relative;
   border: none;
@@ -18,6 +22,7 @@
   width: 100px;
   padding: 8px;
   background-color: var(--secondary);
+  color: var(--red)
 }
 
 .sidebar_button:hover{
@@ -58,17 +63,18 @@
   gap: 5px;
 }
 
-.sidebar_ingredientsWrapper li, .sidebar_measurementsWrapper li{
+.sidebar_ingredientsWrapper li, .sidebar_measurementsWrapper li, .sidebar_instructionsContainer span{
 opacity: 0;
 max-height: 0;
 overflow-y: hidden;
 transition: 0.2s;
 }
 
-.sidebar_ingredientsWrapper.open li, .sidebar_measurementsWrapper.open li{
+.sidebar_ingredientsWrapper.open li, .sidebar_measurementsWrapper.open li, .sidebar_instructionsContainer.open span{
   opacity: 1;
   max-height: 500px;
   transition: all .3s ease;
+  color: var(--blue)
 }
 
 .sidebar_measurementsWrapper{

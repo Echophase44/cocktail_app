@@ -16,9 +16,10 @@ html {
 :root {
   --primary: #f5edf0;
   --blue: #355070;
-  --red: #F15025;
+  --red: #70161E;
   --purple: #6D597A;
   --secondary: #D1CCDC;
+  --test: #70161E;
 }
 
 /* Filter Settings

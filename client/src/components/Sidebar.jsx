@@ -3,21 +3,21 @@ import '../styles/sidebar.css'
 
 function Sidebar(props) {
   const { ingredients, instructions, measurements } = props
-  const [ panels, setPanels ]= useState({ingredientsPanel: false, instructionsPanel: false})
+  const [ panels, setPanels ]= useState({ingredientsPanel: true, instructionsPanel: true})
 
   
 
 
-  const currentIngredients = ingredients.map((element) => (
-    <li className="sidebar_ingredient">{element}</li>    
+  const currentIngredients = ingredients.map((element, index) => (
+    <li key={index} className="sidebar_ingredient">{element}</li>    
   ))
 
-  const currentMeasurements = measurements.map((element) => (
-    <li className="sidebar_measurement">{element}</li>
+  const currentMeasurements = measurements.map((element, index) => (
+    <li key={index} className="sidebar_measurement">{element}</li>
   ))
 
   const currentInstructions = instructions.map((element, index) => (
-    <span>{index + 1}. {element}</span>
+    <span key={index}>{index + 1}. {element}</span>
   ))
 
   function toggleIngredientsView(){

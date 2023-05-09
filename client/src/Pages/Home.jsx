@@ -4,12 +4,13 @@ import Navbar from "../components/Navbar"
 import Display from "../components/Display"
 
 function Home(props) {
-  const { searchResults, handleSearch, currentQuotes, selectDrink, selectedDrink, ingredients, instructions, measurements } = props
+  const { searchResults, handleSearch, currentQuotes, selectDrink, selectedDrink, ingredients, instructions, measurements, viewFavorites, toggleFavoritesView, favoriteDrinks } = props
 
   return (
     <>
       <Navbar 
         handleSearch = {handleSearch}
+        toggleFavoritesView = {toggleFavoritesView}
       />
       <div className="home_container">
         <Sidebar 
@@ -22,6 +23,8 @@ function Home(props) {
           searchResults = {searchResults}
           currentQuotes = {currentQuotes}
           selectDrink = {selectDrink}
+          viewFavorites = {viewFavorites}
+          favoriteDrinks = {favoriteDrinks}
         />
       </div>
     </>

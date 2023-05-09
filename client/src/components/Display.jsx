@@ -3,7 +3,7 @@ import shaker from '../assets/shaker.png'
 import '../styles/display.css'
 
 function Display(props) {
-  const { searchResults, currentQuotes, selectDrink } = props
+  const { searchResults, currentQuotes, selectDrink, viewFavorites, favoriteDrinks } = props
 
     const drinkImages = searchResults.drinks?.map((element, index) => (
       <div key={index} className='display_cardContainer' onClick={() => selectDrink(index)}>
@@ -14,24 +14,33 @@ function Display(props) {
       </div>
     ))
 
-  return (
-    <section className='display_main'>
+  return (<>
+    {!viewFavorites.viewState && <section className='display_main'>
       
       {Object.keys(searchResults).length === 0 && <div className='display_empty'>
         <img src={shaker} alt="Drink shaker" />
-        <p>Search for a drink to see results.</p>
+        <p>Search for a drink to get started.</p>
       </div> }
       
       {searchResults.drinks?.length >= 1 && <div className='display_allCards'>
         {drinkImages}
       </div>}
       
-      {searchResults.drinks === null && <div className='display_noResults'> 
+      {searchResults.drinks === null && <div className='display_empty dark'>
+      <img src={shaker} alt="Drink shaker" /> 
       <p>No results found!</p>
-      <p>Try searching for something else!</p>
       </div>}
     
-    </section>
+    </section>}
+
+    {viewFavorites.viewState && 
+      <section className='display_main'>
+        {favoriteDrinks.length === 0 && <div className='display_empty dark'>
+          <img src={shaker} alt="Drink shaker"/> 
+          <p>No favorites in your collection.</p>
+        </div>}
+      </section>}
+    </>
   )
 }
 

@@ -20,16 +20,16 @@
   border-radius: 15px;
 }
 
-.display_empty > img{
+.display_empty > img, .display_noResults > img{
   height: 100px;
   width: auto;
   filter: invert(90%) sepia(13%) saturate(194%) hue-rotate(217deg) brightness(92%) contrast(88%);
 }
 
-.display_empty > p, .display_noResults > p{
+.display_empty > p{
   padding-top: 50px;
   font-size: 2rem;
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .display_allCards{
@@ -85,6 +85,14 @@
   opacity: 0.5;
 }
 
-.display_noResults{
-  border: 8px dashed var(--red);
+.display_empty.dark{
+  border: 8px dashed var(--blue);
+}
+
+.display_empty.dark > img{
+  filter: invert(27%) sepia(6%) saturate(3691%) hue-rotate(173deg) brightness(102%) contrast(91%);
+}
+
+.display_emptyFavorites{
+
 }

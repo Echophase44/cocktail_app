@@ -90,4 +90,5 @@ transition: 0.2s;
 
 .sidebar_note{
   padding-top: 20px;
+  color: var(--red);
 }

@@ -12,10 +12,13 @@ function App() {
   const [ingredients, setIngredients] = useState([])
   const [measurements, setMeasurements] = useState([])
   const [instructions, setInstructions] = useState([])
+  const [favoriteDrinks, setFavoriteDrinks] = useState([])
+  const [viewFavorites, setViewFavorites] = useState({viewState: false})
 
   function handleSearch(e) {
     if(e.key === "Enter") {
       setSearchParam(e.target.value)
+      setViewFavorites({viewState: false})
     }
   }
 
@@ -91,6 +94,13 @@ function App() {
     setSelectedDrink(searchResults.drinks[index])
   }
 
+  function toggleFavoritesView(){
+    setViewFavorites(prevState => ({
+      ...prevState,
+      viewState: !prevState.viewState
+    }))
+  }
+
   return (
     <>
       <Home
@@ -102,6 +112,9 @@ function App() {
         ingredients = {ingredients}
         measurements = {measurements}
         instructions = {instructions}
+        favoriteDrinks = {favoriteDrinks}
+        viewFavorites = {viewFavorites}
+        toggleFavoritesView = {toggleFavoritesView}
       />
     </>
   )

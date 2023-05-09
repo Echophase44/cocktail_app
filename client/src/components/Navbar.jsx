@@ -2,16 +2,16 @@ import React from "react";
 import '../styles/navbar.css'
 
 function Navbar(props) {
-  const { handleSearch } = props
+  const { handleSearch, toggleFavoritesView } = props
   
   return(
     <header className="navbar_container">
       <nav className="navbar_content">
         <div></div>
         <div className="navbar_rightSide">
-          <h1>Enter a liquor :</h1>
+          <h1>Search for a drink :</h1>
           <input type="text" name="search" id="search" onKeyDown={handleSearch}/>
-          <a className="navbar_favorites" href="">View Favorites</a>
+          <button className="navbar_favorites" onClick={() => toggleFavoritesView()}>View Favorites</button>
         </div>
       </nav>
     </header>

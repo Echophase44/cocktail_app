@@ -10,7 +10,9 @@
 
 ## ToDo for MVP
 
-- Add the toggle for both as well.
-- Add language selection for ingredients once those are complete.
 - Add ability to save favorites: icon over image and local storage.
-- Add drink name to cards.
+- Add a "glow" effect or some sort of identifier to the selected drink in the display.
+
+### Extra Features
+
+- Add language selection for ingredients.

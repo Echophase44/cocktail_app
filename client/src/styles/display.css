@@ -65,6 +65,27 @@
   transition: all .3s ease;
 }
 
+.display_bookmark{
+  height: 35px;
+}
+
+.display_bookmarkBtn{
+  opacity: 0;
+  position: absolute;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  transition: .3s;
+}
+
+.display_bookmarkBtn:hover{
+  cursor: pointer;
+}
+
+.display_cardContainer:hover > .display_bookmarkBtn{
+  opacity: 1;
+}
+
 .display_filler{
   min-height: 250px;
   width: 250px;

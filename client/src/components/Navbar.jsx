@@ -1,4 +1,5 @@
 import React from "react";
+import  shaker from '../assets/shaker.png'
 import '../styles/navbar.css'
 
 function Navbar(props) {
@@ -7,7 +8,7 @@ function Navbar(props) {
   return(
     <header className="navbar_container">
       <nav className="navbar_content">
-        <div></div>
+        <img className="navbar_logo" src={shaker} alt="Drink shaker" />
         <div className="navbar_rightSide">
           <h1>Search for a drink :</h1>
           <input type="text" name="search" id="search" onKeyDown={handleSearch}/>

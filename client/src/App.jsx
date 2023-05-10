@@ -101,6 +101,34 @@ function App() {
     }))
   }
 
+  function addToFavorites(drink){
+    let newDrinks = []
+
+    if(favoriteDrinks.length === 0){
+      newDrinks.push(drink)
+    } else if ( favoriteDrinks.length > 0){
+        favoriteDrinks.forEach((element) => {
+          newDrinks.push(element)
+        if(!newDrinks.includes(drink)){
+          newDrinks.push(drink)
+        }
+      })}
+
+    setFavoriteDrinks(newDrinks)
+  }
+
+  function removeFromFavorites(drink){
+    let newDrinks = []
+
+    favoriteDrinks.forEach((element) => {
+      if(element.idDrink !== drink.idDrink){
+        newDrinks.push(element)
+      }
+    })
+    
+    setFavoriteDrinks(newDrinks)
+  }
+
   return (
     <>
       <Home
@@ -115,6 +143,8 @@ function App() {
         favoriteDrinks = {favoriteDrinks}
         viewFavorites = {viewFavorites}
         toggleFavoritesView = {toggleFavoritesView}
+        addToFavorites = {addToFavorites}
+        removeFromFavorites = {removeFromFavorites}
       />
     </>
   )

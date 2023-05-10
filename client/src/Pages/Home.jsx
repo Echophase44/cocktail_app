@@ -4,7 +4,9 @@ import Navbar from "../components/Navbar"
 import Display from "../components/Display"
 
 function Home(props) {
-  const { searchResults, handleSearch, currentQuotes, selectDrink, selectedDrink, ingredients, instructions, measurements, viewFavorites, toggleFavoritesView, favoriteDrinks } = props
+  const { searchResults, handleSearch, currentQuotes, selectDrink, selectedDrink, 
+    ingredients, instructions, measurements, viewFavorites, toggleFavoritesView, 
+    favoriteDrinks, addToFavorites, removeFromFavorites } = props
 
   return (
     <>
@@ -25,6 +27,8 @@ function Home(props) {
           selectDrink = {selectDrink}
           viewFavorites = {viewFavorites}
           favoriteDrinks = {favoriteDrinks}
+          addToFavorites = {addToFavorites}
+          removeFromFavorites = {removeFromFavorites}
         />
       </div>
     </>

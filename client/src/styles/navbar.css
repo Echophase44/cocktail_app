@@ -9,9 +9,14 @@
 
 .navbar_content {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center; 
   height: 80px;
+}
+
+.navbar_logo{
+  height: 45px;
+  margin: 0px 45px;
 }
 
 .navbar_rightSide{

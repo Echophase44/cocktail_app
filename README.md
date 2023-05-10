@@ -7,11 +7,13 @@
 
 <a href="https://www.flaticon.com/free-icons/left" title="left icons">Left icons created by th studio - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/shaker" title="shaker icons">Shaker icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/bookmark" title="bookmark icons">Bookmark icons created by nawicon - Flaticon</a>
 
 ## ToDo for MVP
 
 - Add ability to save favorites: icon over image and local storage.
 - Add a "glow" effect or some sort of identifier to the selected drink in the display.
+- Mobile responsivness: Close/open ingredients section.
 
 ### Extra Features
 

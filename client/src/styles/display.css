@@ -40,7 +40,6 @@
   justify-content: center;
   min-height: 80vh;
   gap: 25px;
-  
 }
 
 .display_cardContainer{
@@ -55,13 +54,15 @@
   transition: all .3s ease;
   background-color: white;
   box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.3);
+  border: 3px solid transparent;
+  border-radius: 3px;
 }
 
 .display_cardDrinkImage{
   position: absolute;
   top: 0;
   height: auto;
-  width: 250px;
+  width: 244px;
   transition: all .3s ease;
 }
 
@@ -80,10 +81,12 @@
 
 .display_bookmarkBtn:hover{
   cursor: pointer;
+  filter: invert(27%) sepia(6%) saturate(3691%) hue-rotate(173deg) brightness(102%) contrast(91%); 
 }
 
 .display_cardContainer:hover > .display_bookmarkBtn{
   opacity: 1;
+  filter: invert(27%) sepia(6%) saturate(3691%) hue-rotate(173deg) brightness(102%) contrast(91%); 
 }
 
 .display_filler{
@@ -93,12 +96,12 @@
 
 .display_drinkName{
   font-size: 1.8rem;
-  color: var(--blue)
+  color: var(--blue);
 }
 
 .display_cardQuote{
   font-size: 1.4rem;
-  padding: 3px;
+  padding-bottom: 3px;
 }
 
 .display_cardContainer:hover .display_cardDrinkImage{
@@ -114,6 +117,6 @@
   filter: invert(27%) sepia(6%) saturate(3691%) hue-rotate(173deg) brightness(102%) contrast(91%);
 }
 
-.display_emptyFavorites{
-
+.display_cardContainer.selected{
+  border: 3px solid var(--blue)
 }

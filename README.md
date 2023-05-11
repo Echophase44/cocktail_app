@@ -11,8 +11,6 @@
 
 ## ToDo for MVP
 
-- Add ability to save favorites: icon over image and local storage.
-- Add a "glow" effect or some sort of identifier to the selected drink in the display.
 - Mobile responsivness: Close/open ingredients section.
 
 ### Extra Features

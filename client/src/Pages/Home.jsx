@@ -13,6 +13,7 @@ function Home(props) {
       <Navbar 
         handleSearch = {handleSearch}
         toggleFavoritesView = {toggleFavoritesView}
+        viewFavorites = {viewFavorites}
       />
       <div className="home_container">
         <Sidebar 

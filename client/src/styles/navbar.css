@@ -19,14 +19,14 @@
   margin: 0px 45px;
 }
 
-.navbar_rightSide{
+.navbar_search{
   display: flex;
   align-items: center;
   gap: 30px;
   color: var(--primary)
 }
 
-.navbar_rightSide > input {
+.navbar_search > input {
   border-radius: 10px;
   border: none;
   height: 25px;
@@ -34,11 +34,11 @@
   font-size: 1.4rem;
 }
 
-.navbar_rightSide > input:focus {
+.navbar_search > input:focus {
   outline: none;
 }
 
-.navbar_favorites{
+.navbar_favorites, .navbar_viewSearches{
   margin: 0px 30px 0px 100px;
   border: 2px solid var(--primary);
   padding: 8px 10px;
@@ -46,10 +46,16 @@
   background-color: var(--blue);
   font-size: 1.4rem;
   border-radius: 15px;
+  transition: .4s;
 }
 
-.navbar_favorites:hover{
+.navbar_favorites:hover, .navbar_viewSearches{
   background-color: var(--primary);
   color: var(--blue);
   cursor: pointer;
+}
+
+.navbar_viewSearches:hover{
+  background-color: var(--blue);
+  color: var(--primary);
 }

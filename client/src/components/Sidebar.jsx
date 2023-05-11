@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import arrow from '../assets/chevron.png'
 import '../styles/sidebar.css'
+import '../styles/sidebarMobile.css'
 
 function Sidebar(props) {
   const { ingredients, instructions, measurements } = props
-  const [ panels, setPanels ]= useState({ingredientsPanel: true, instructionsPanel: true})
-
-  
+  const [ panels, setPanels ]= useState({ingredientsPanel: true, instructionsPanel: true, mobileMenu: true})
 
 
   const currentIngredients = ingredients.map((element, index) => (
@@ -34,9 +34,19 @@ function Sidebar(props) {
     }))
   }
 
+  function toggleMobileSidebar(){
+    setPanels(prevPanels => ({
+      ...prevPanels,
+      mobileMenu: !prevPanels.mobileMenu
+    }))
+  }
+
   return(
-    <section className="sidebar_container">
-      <h2>Offical Cocktails</h2>
+    <section className={"sidebar_container"+ (panels.mobileMenu ? " open" : " closed")}>
+      <div className="sidebar_titleWrapper">
+        <h2>Offical Cocktails</h2>
+        <button className={"sidebar_mobileBtn" + (panels.mobileMenu ? " open" : "")} onClick={toggleMobileSidebar}><img className="sidebar_mobileBtnImg" src={arrow} alt="" /></button>
+      </div>
       <p>Search through thousands of premium cocktails.</p>
       <button className={"sidebar_button" + (panels.ingredientsPanel ? " open" : "")} onClick={toggleIngredientsView}><strong>Ingredients</strong></button>
         <div className="sidebar_ingredientsContainer">

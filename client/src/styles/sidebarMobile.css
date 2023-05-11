@@ -1,0 +1,62 @@
+/* ############## Sidebar ############### */
+
+.sidebar_mobileBtn{
+  background-color: var(--secondary);
+  border: none;
+  position: absolute;
+  right: 5px;
+}
+
+.sidebar_mobileBtnImg{
+  display: none;
+  height: 35px;
+  width: auto;
+  transform: rotate(180deg);
+  transition: .4s;
+}
+
+.sidebar_mobileBtn.open > .sidebar_mobileBtnImg{
+  transform: rotate(270deg);
+}
+
+.sidebar_mobileBtn:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+
+  .sidebar_container{
+    margin-left: -100px;
+    position: relative;
+  }
+
+  .sidebar_titleWrapper > h2{
+    color: var(--blue)
+  }
+
+  .sidebar_container.closed > .sidebar_titleWrapper > h2{
+    color: var(--secondary);
+    transition: all .4s ease;
+  }
+
+  .sidebar_container.open{
+    margin-left: 0;
+    width: 250px;
+  }
+
+  .sidebar_mobileBtnImg{
+    display: block;
+  }
+
+  .sidebar_container > p{
+    color: var(--secondary);
+  }
+
+  .sidebar_container.open > p{
+    color: var(--blue);
+  }
+
+  .sidebar_container.closed > .sidebar_button{
+    color: var(--secondary)
+  }
+}

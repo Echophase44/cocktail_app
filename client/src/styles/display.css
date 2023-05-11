@@ -120,3 +120,18 @@
 .display_cardContainer.selected{
   border: 3px solid var(--blue)
 }
+
+@media screen and (max-width: 768px){
+  .display_main{
+    width: 100vw;
+  }
+
+  .display_empty, .display_noResults{
+    height: 300px;
+    width: 300px;
+  }
+
+  .display_empty > p{
+    font-size: 1.4rem;
+  }
+}

@@ -17,7 +17,7 @@ function Display(props) {
     const drinkImages = searchResults.drinks?.map((element, index) => (
       <div key={index} 
       className={'display_cardContainer' + (selectedDrink === element.idDrink ? " selected" : "")} 
-      onClick={() => {selectDrink(index); addBorder(element.idDrink)}}>
+      onMouseDown={() => {selectDrink(index); addBorder(element.idDrink)}}>
         <img className="display_cardDrinkImage" src={element.strDrinkThumb} alt="Drink in a glass" />
         {!favoriteDrinks.includes(element) && <button onClick={() => addToFavorites(element)} className='display_bookmarkBtn'><img className='display_bookmark' src={emptyMark} alt="" /></button>}
         {favoriteDrinks.includes(element) && <button onClick={() => removeFromFavorites(element)} className='display_bookmarkBtn'><img className='display_bookmark' src={filledMark} alt="" /></button>}

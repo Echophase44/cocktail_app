@@ -28,9 +28,10 @@
   .sidebar_container{
     margin-left: -100px;
     position: relative;
+    border-right: 1px solid var(--red);
   }
 
-  .sidebar_titleWrapper > h2{
+  .sidebar_titleWrapper > h2, .sidebar_container.open > p{
     color: var(--blue)
   }
 
@@ -48,15 +49,8 @@
     display: block;
   }
 
-  .sidebar_container > p{
+  .sidebar_container > p, .sidebar_container.closed > .sidebar_button{
     color: var(--secondary);
   }
-
-  .sidebar_container.open > p{
-    color: var(--blue);
-  }
-
-  .sidebar_container.closed > .sidebar_button{
-    color: var(--secondary)
-  }
+  
 }

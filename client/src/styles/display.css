@@ -124,6 +124,13 @@
 @media screen and (max-width: 768px){
   .display_main{
     width: 100vw;
+    max-height: 100vh;
+  }
+
+  .display_allCards{
+    margin-top: 100px;
+    max-width: 100vw;
+    max-height: 100vh;
   }
 
   .display_empty, .display_noResults{
@@ -133,5 +140,20 @@
 
   .display_empty > p{
     font-size: 1.4rem;
+  }
+
+  .display_cardContainer{
+    padding: 8px;
+    max-height: 300px;
+    width: 225px;
+  }
+
+  .display_cardDrinkImage{
+    width: 220px;
+    transition: all .3s ease;
+  }
+
+  .display_cardQuote{
+    display: none;
   }
 }

@@ -17,7 +17,7 @@ function Sidebar(props) {
   ))
 
   const currentInstructions = instructions.map((element, index) => (
-    <span key={index}>{index + 1}. {element}</span>
+    <span key={index} className="sidebar_instructions">{index + 1}. {element}</span>
   ))
 
   function toggleIngredientsView(){
@@ -35,10 +35,23 @@ function Sidebar(props) {
   }
 
   function toggleMobileSidebar(){
-    setPanels(prevPanels => ({
-      ...prevPanels,
-      mobileMenu: !prevPanels.mobileMenu
-    }))
+    if(panels.ingredientsPanel || panels.instructionsPanel){
+      setPanels(prevPanels => ({
+        ...prevPanels,
+        ingredientsPanel: false,
+        instructionsPanel: false,
+        mobileMenu: !prevPanels.mobileMenu
+      }))} else if (!panels.ingredientsPanel && !panels.instructionsPanel && !panels.mobileMenu){
+        setPanels(prevPanels => ({
+          ...prevPanels,
+          ingredientsPanel: true,
+          instructionsPanel: true,
+          mobileMenu: true
+        })) 
+      }else { setPanels(prevPanels =>({
+        ...prevPanels,
+        mobileMenu: !prevPanels.mobileMenu
+      }))}
   }
 
   return(

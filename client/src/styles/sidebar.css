@@ -70,7 +70,7 @@
 opacity: 0;
 max-height: 0;
 overflow-y: hidden;
-transition: 0.2s;
+transition: all .3s ease;
 }
 
 .sidebar_ingredientsWrapper.open li, .sidebar_measurementsWrapper.open li, .sidebar_instructionsContainer.open span{

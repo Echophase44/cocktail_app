@@ -39,7 +39,7 @@
 }
 
 .navbar_favorites, .navbar_viewSearches{
-  margin: 0px 30px 0px 100px;
+  margin-right: 30px;
   border: 2px solid var(--primary);
   padding: 8px 10px;
   color: var(--primary);
@@ -58,4 +58,17 @@
 .navbar_viewSearches:hover{
   background-color: var(--blue);
   color: var(--primary);
+}
+
+@media screen and (max-width: 700px){
+  .navbar_search{
+    font-size: .9rem;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 15px;
+  }
+
+  .navbar_logo{
+   display: none;
+  }
 }

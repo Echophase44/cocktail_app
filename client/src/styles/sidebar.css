@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   padding: 100px 30px 30px 30px;
-  width: 35%;
-  min-height: 100%;
+  max-width: 50%;
+  max-height: 100%;
   background-color: var(--secondary);
   color: var(--blue);
   gap: 15px;

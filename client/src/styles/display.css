@@ -124,13 +124,11 @@
 @media screen and (max-width: 768px){
   .display_main{
     width: 100vw;
-    max-height: 100vh;
   }
 
   .display_allCards{
     margin-top: 100px;
     max-width: 100vw;
-    min-height: 100vh;
   }
 
   .display_empty, .display_noResults{

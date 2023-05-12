@@ -130,27 +130,37 @@
   .display_allCards{
     margin-top: 100px;
     max-width: 100vw;
-    max-height: 100vh;
+    min-height: 100vh;
   }
 
   .display_empty, .display_noResults{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
   }
 
   .display_empty > p{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5px;
   }
 
   .display_cardContainer{
     padding: 8px;
-    max-height: 300px;
+    height: 325px;
     width: 225px;
   }
 
   .display_cardDrinkImage{
     width: 220px;
     transition: all .3s ease;
+  }
+
+  .display_empty > img, .display_noResults > img{
+    height: 50px;
+  }
+
+  .display_drinkName{
+    text-align: center;
   }
 
   .display_cardQuote{

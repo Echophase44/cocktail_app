@@ -22,7 +22,6 @@ function Display(props) {
         {!favoriteDrinks.includes(element) && <button onClick={() => addToFavorites(element)} className='display_bookmarkBtn'><img className='display_bookmark' src={emptyMark} alt="" /></button>}
         {favoriteDrinks.includes(element) && <button onClick={() => removeFromFavorites(element)} className='display_bookmarkBtn'><img className='display_bookmark' src={filledMark} alt="" /></button>}
         <div className='display_filler'></div>
-        <div className='display_cardGlow'></div>
         <p className='display_drinkName'><strong>{element.strDrink}</strong></p>
         <p className='display_cardQuote'>{currentQuotes[index]?.quote} <em>-{currentQuotes[index]?.author}</em></p>
       </div>

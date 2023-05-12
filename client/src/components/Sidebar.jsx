@@ -5,7 +5,7 @@ import '../styles/sidebarMobile.css'
 
 function Sidebar(props) {
   const { ingredients, instructions, measurements } = props
-  const [ panels, setPanels ]= useState({ingredientsPanel: true, instructionsPanel: true, mobileMenu: true})
+  const [ panels, setPanels ]= useState({ingredientsPanel: false, instructionsPanel: false, mobileMenu: false})
 
 
   const currentIngredients = ingredients.map((element, index) => (

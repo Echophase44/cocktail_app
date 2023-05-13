@@ -12,6 +12,10 @@
   overflow-y: auto;
 }
 
+.sidebar_container::-webkit-scrollbar{
+  display: none;
+}
+
 .sidebar_container > p{
   padding-bottom: 25px;
   transition: all .4s ease;

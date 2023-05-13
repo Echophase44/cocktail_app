@@ -26,9 +26,10 @@
 @media screen and (max-width: 768px){
 
   .sidebar_container{
-    margin-left: -150px;
+    margin-left: -100px;
     position: relative;
     border-right: 1px solid var(--red);
+    width: 35vw;
   }
 
   .sidebar_titleWrapper > h2, .sidebar_container.open > p{

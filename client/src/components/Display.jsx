@@ -69,6 +69,7 @@ function Display(props) {
 
         {favoriteDrinks.length > 0 && 
           <div className='display_allCards'>
+            <div className='display_margin'></div>
             {favoritesCollection}
           </div>
         }

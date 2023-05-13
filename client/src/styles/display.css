@@ -1,10 +1,10 @@
 .display_main{
-  width: 65vw;
-  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--primary);
   display: flex;
   justify-content: center;
-  align-items: bottom;
+  align-items: center;
   overflow-y: auto;
 }
 
@@ -33,13 +33,18 @@
 }
 
 .display_allCards{
-  margin-top: 90px;
   width: 65vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 95vh;
+  height: 95vh;
   gap: 25px;
+}
+
+.display_margin{
+  margin-top: 50px;
+  height: 10px;
+  width: 800px;
 }
 
 .display_cardContainer{
@@ -121,6 +126,10 @@
   border: 3px solid var(--blue)
 }
 
+.display_marginBottom{
+  height: 100px;
+}
+
 @media screen and (max-width: 768px){
   .display_main{
     width: 100vw;
@@ -159,9 +168,14 @@
 
   .display_drinkName{
     text-align: center;
+    font-size: 1.5rem;
   }
 
   .display_cardQuote{
     display: none;
+  }
+
+  .display_margin{
+    margin-top: 30px;
   }
 }

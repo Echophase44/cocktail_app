@@ -17,7 +17,7 @@ function Sidebar(props) {
   ))
 
   const currentInstructions = instructions.map((element, index) => (
-    <span key={index} className="sidebar_instructions">{index + 1}. {element}</span>
+    <span key={index} className="sidebar_instructions"><strong>{index + 1}.</strong> {element}</span>
   ))
 
   function toggleIngredientsView(){

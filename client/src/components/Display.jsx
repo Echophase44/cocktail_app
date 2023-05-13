@@ -49,6 +49,7 @@ function Display(props) {
       </div> }
       
       {searchResults.drinks?.length >= 1 && <div className='display_allCards'>
+        <div className='display_margin'></div>
         {drinkImages}
       </div>}
       

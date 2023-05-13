@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   padding: 100px 30px 30px 30px;
-  max-width: 50%;
-  max-height: 100%;
+  width: 40vh;
+  max-height: 100vh;
   background-color: var(--secondary);
   color: var(--blue);
   gap: 15px;
   font-size: 1.4rem;
   transition: all .4s ease;
+  overflow-y: auto;
 }
 
 .sidebar_container > p{

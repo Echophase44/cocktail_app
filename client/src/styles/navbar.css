@@ -17,6 +17,7 @@
 .navbar_logo{
   height: 45px;
   margin: 0px 45px;
+  filter: invert(96%) sepia(66%) saturate(422%) hue-rotate(238deg) brightness(109%) contrast(92%);
 }
 
 .navbar_search{

@@ -13,7 +13,7 @@
 }
 
 .display_empty, .display_noResults{
-  margin-top: 150px;
+  margin-top: 100px;
   height: 400px;
   width: 400px;
   display: flex;
@@ -146,14 +146,18 @@
   }
 
   .display_empty, .display_noResults{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 250px;
+  }
+
+  .display_empty > img, .display_noResults >img{
+    height: 200px
   }
 
   .display_empty > p{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
-    padding: 5px;
+    padding: 25px;
   }
 
   .display_cardContainer{

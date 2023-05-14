@@ -26,7 +26,7 @@
 @media screen and (max-width: 768px){
 
   .sidebar_container{
-    margin-left: -100px;
+    margin-left: -80px;
     position: relative;
     border-right: 1px solid var(--red);
     width: 35vw;

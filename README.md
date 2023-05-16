@@ -1,7 +1,7 @@
 # Cocktail_app
 
 <p align="center">
-  <img src="./assets/CocktailApp.PNG" width="600"/>
+  <img src="./src/assets/CocktailApp.PNG" width="600"/>
 </p>
 
 - This is an updated and reimagined version of an previous app I built. The original (seen here: https://github.com/Echophase44/Drinks_Mixer) was created using the basic HTML, CSS and JS.
